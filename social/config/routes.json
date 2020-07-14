@@ -1,0 +1,24 @@
+{
+    "routes": [
+        {
+            "method": "POST",
+            "path": "/social/facebook",
+            "handler": "Auth.facebook",
+            "config": {
+                "policies": [],
+                "prefix": "",
+                "description": "Custom Login with facebook"
+            }
+        },
+        {
+            "method": "POST",
+            "path": "/social/google",
+            "handler": "Auth.google",
+            "config": {
+                "policies": [],
+                "prefix": "",
+                "description": "Custom Login with google"
+            }
+        }
+    ]
+}
