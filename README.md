@@ -4,6 +4,15 @@ A simplified aproach to login using **CMS Strapi** via social network.
 
 ## Getting started
 
+The plugin has dependencies on fb and axios, so before anything run the commands:
+ - `npm i fb --save`
+ - `npm i fb --save`
+
+Using yarn:
+
+ - `yarn add fb`
+ - `yarn add axios`
+
  1. Go to your strapi project
  2. Open the project `/extensions` folder
  3. Clone the folder `/social` inside the folder
