@@ -15,12 +15,12 @@ You are ready to go!
 ## Usage
 When you make a request to google or facebook, get the access token and send through:
 
- - GET - `/social/facebook` BODY `{access_key: Ajsu.fi4s9uS...}`
+ - POST - `/social/facebook` BODY `{access_key: Ajsu.fi4s9uS...}`
 to access using facebook token
 
 or:
 
- - GET - `/social/google` BODY `{access_key: s5Kj.8sEo...}`
+ - POST - `/social/google` BODY `{access_key: s5Kj.8sEo...}`
 to access using facebook token
 
 > WARNING: New users that are created will look for the role with name Authenticated. if there are no roles with this name, the plugin will crash. To use custom role names, you may do so editing the the `Auth.js` inside the `controllers` folder.
