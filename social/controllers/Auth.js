@@ -33,8 +33,15 @@ const googleLogin = (access_token) => {
 }
 
 
-const access = async (id, email, name) => {
-    const account = await strapi.query('user', 'users-permissions').findOne({ social_id: id });
+const access = async (id, email, name) => { 
+    const account = await strapi.query('user', 'users-permissions')
+        .findOne({ 
+            $or:[
+                { social_id:id },
+                { username:email },
+                { email },
+            ]
+        });
     if (account) return authorize(account);
 
     const role = await strapi.query('role', 'users-permissions').findOne({name: "Authenticated"});
